@@ -8,7 +8,5 @@ call npm run install-node-prune-win
 call npm run prune-node-modules
 call npm run package-win
 call npm run fix-binary-timestamps
-
-call powershell -Command "& {Get-ChildItem -path ""release\\"" -rec -file *.*;}"
-
+call npm run list-dir-contents
 call npm run installer-win
