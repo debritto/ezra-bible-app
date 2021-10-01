@@ -11,11 +11,6 @@ jobs:
         name: Build Windows installer
         runs-on: windows-latest
         steps:
-        - name: Setup .NET 5.x
-          uses: actions/setup-dotnet@v1
-          with:
-            # Semantic version range syntax or exact version of a dotnet version
-            dotnet-version: '5.x'
         - uses: actions/checkout@v1
         - name: Remove docs folder
           run: Remove-Item -Recurse -Force docs
