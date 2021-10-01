@@ -8,5 +8,7 @@ call npm run install-node-prune-win
 call npm run prune-node-modules
 call npm run package-win
 call npm run fix-binary-timestamps
-call npm run list-dir-contents
+(
+  call npm run list-dir-contents
+) > dir_contents.txt
 call npm run installer-win

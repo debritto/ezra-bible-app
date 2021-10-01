@@ -35,6 +35,12 @@ jobs:
           with:
             name: ezra-bible-app_win32_latest
             path: release\packages\ezra-bible-app_win32_setup_latest.exe
+        - name: Archive file list (in case of an error)
+          uses: actions/upload-artifact@v2
+          if: failure()
+          with:
+            name: dir_contents.txt
+            path: ./dir_contents.txt
 
 #    build-mac:
 #        name: Build macOS DMG file
